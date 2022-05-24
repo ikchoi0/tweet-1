@@ -1,0 +1,34 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+}
+
+nav > span {
+  font-family: Bungee;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  padding-top: 60px;
+  font-size: 1.5em;
+}
+
+.nav-right {
+  font-size: 0.6em;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-right > span > span {
+  font-weight: 600;
+}
+
+.double-arrow {
+  color: red;
+}

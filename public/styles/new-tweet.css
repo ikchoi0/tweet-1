@@ -1,0 +1,60 @@
+.new-tweet > form {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+}
+
+form > label {
+  font-weight: 600;
+  font-size: 0.8em;
+  color: rgb(111, 109, 109);
+}
+
+#tweet-text {
+  background-color: beige;
+  overflow: auto;
+  resize: none;
+  height: 35px;
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-width: 3px;
+  border-bottom-color: black;
+  font-size: 0.7em;
+  padding-bottom: 40px;
+  margin-top: 0.5em;
+}
+
+
+
+#tweet-text:focus {
+  outline: 0;
+}
+
+#tweet-text::-webkit-scrollbar {
+  display: none;
+}
+
+form > div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Bungee";
+}
+
+.tweet-button {
+  font-size: 14px;
+  background-color: rgb(12, 87, 153);
+  color: white;
+  border: none;
+}
+
+.tweet-button:focus {
+  outline: auto;
+}
+
+.word-count {
+  font-size: 20px;
+}

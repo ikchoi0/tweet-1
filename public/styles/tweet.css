@@ -1,0 +1,23 @@
+.tweet-container {
+  background-color: rgb(201, 171, 171);
+}
+
+article.tweet {
+  border-style: solid;
+  border-color: rgb(82, 82, 82);
+  border-width: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+article.tweet > header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article > footer  {
+  display: flex;
+  justify-content: space-between;
+}
