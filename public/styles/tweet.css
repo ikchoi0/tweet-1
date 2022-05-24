@@ -16,7 +16,7 @@ article.tweet > header {
   align-items: center;
 }
 
-article > footer  {
+article > footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,6 +53,10 @@ article.tweet > header > i {
 }
 
 article.tweet > footer > div.icons {
-  color: #4056A1;
+  color: #4056a1;
   align-self: flex-start;
+}
+
+article.tweet > footer > div.icons > i:hover {
+  color: gold;
 }
