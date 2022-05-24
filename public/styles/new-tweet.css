@@ -20,7 +20,8 @@ form > label {
   border-left: 0;
   border-right: 0;
   border-width: 3px;
-  border-bottom-color: black;
+  border-bottom-color: rgb(82, 82, 82);
+  ;
   font-size: 0.7em;
   padding-bottom: 40px;
   margin-top: 0.5em;
