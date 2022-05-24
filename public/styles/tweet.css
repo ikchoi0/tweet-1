@@ -9,6 +9,10 @@ article.tweet {
   height: 7em;
 }
 
+article.tweet:hover {
+  box-shadow: 0.2em 0.2em  rgb(198, 207, 219);
+}
+
 article.tweet > header {
   margin-top: 0.2em;
   display: flex;
@@ -57,6 +61,11 @@ article.tweet > footer > div.icons {
   align-self: flex-start;
 }
 
-article.tweet > footer > div.icons > i:hover {
+div.icons > i {
+  margin-left: 0.3em;
+}
+
+div.icons > i:hover {
   color: gold;
 }
+
