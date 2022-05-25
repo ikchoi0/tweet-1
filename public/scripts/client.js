@@ -24,13 +24,44 @@ $(() => {
       });
     }
   });
-  function loadtweets() {
-    const data = $.ajax("http://localhost:8080/tweets/").done(function (json) {
-      return renderTweets(json);
-    });
-  }
+  $("span.toggle-tweet").on("click", function () {
+    const $newTweetSection = $("section.new-tweet");
+    if ($newTweetSection.css("display") === "none") {
+      $newTweetSection.slideDown("slow");
+    } else {
+      $newTweetSection.slideUp("slow");
+    }
+  });
+  $("span.toggle-tweet").on("mouseenter", function () {
+    const toggleIcon = $(".toggle-tweet > i");
+    toggleIcon.css("animation", "bounce 2s ease infinite");
+  });
+  $("span.toggle-tweet").on("mouseleave", function () {
+    const toggleIcon = $(".toggle-tweet > i");
+    toggleIcon.css("animation", "");
+  });
+  $(document).scroll(function () {
+    var y = $(this).scrollTop();
+    const writeNewTweet = $(".nav-right");
+    const scrollToTopIcon = $(".scroll-top");
+    if (y > 100) {
+      writeNewTweet.css("display", "none");
+      scrollToTopIcon.css("display", "block");
+    } else {
+      writeNewTweet.css("display", "flex");
+      scrollToTopIcon.css("display", "none");
+    }
+  });
+  $(".scroll-top").on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, 100);
+  });
   loadtweets();
 });
+function loadtweets() {
+  const data = $.ajax("http://localhost:8080/tweets/").done(function (json) {
+    return renderTweets(json);
+  });
+}
 
 function validateInputLength(length) {
   if (length === 140) {
