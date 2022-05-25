@@ -9,7 +9,7 @@ nav {
   position: fixed;
 }
 
-nav > span {
+nav > div {
   font-family: Bungee;
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -25,10 +25,22 @@ nav > span {
   align-items: center;
 }
 
+.write-new-tweet {
+  padding: 0.5em;
+}
+
 .nav-right > span > span {
   font-weight: 600;
 }
 
-.double-arrow {
+.toggle-tweet > i {
   color: red;
+  padding: 0 0.3em 0.3em 0.3em;
 }
+
+@keyframes bounce {
+	0%, 100% {transform: translateY(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateY(-0.3em);}
+	20%, 40%, 60%, 80% {transform: translateY(0.3em);}
+}
+
