@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .new-tweet > form {
   display: flex;
   flex-direction: column;
@@ -26,8 +30,6 @@ form > label {
   margin-top: 0.5em;
 }
 
-
-
 #tweet-text:focus {
   outline: 0;
 }
@@ -52,7 +54,7 @@ form > div {
 }
 
 .tweet-button:active {
-  outline:auto;
+  outline: auto;
 }
 
 .word-count {
