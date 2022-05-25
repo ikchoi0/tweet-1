@@ -27,31 +27,43 @@
     <link rel="stylesheet" href="./styles/reset.css" type="text/css" />
     <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/header.css" type="text/css"/>
-    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css"/>
-    <link rel="stylesheet" href="./styles/tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="./styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/composer.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"
+    ></script>
     <!-- App JS -->
     <script type="text/javascript" src="./scripts/client.js"></script>
 
     <!-- Custom Scripts-->
     <script src="./scripts/composer-char-counter.js"></script>
-    
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
-      <span>
+      <div>tweeter</div>
+      <div>
         <div class="nav-right">
-          <span class="write-new-tweet"><span>Write</span> a new tweet</span>
-          <span><i class="fa-solid fa-angles-down double-arrow"></i></span>
+          <span class="toggle-tweet write-new-tweet"
+            ><span>Write</span> a new tweet</span
+          >
+          <span class="toggle-tweet"
+            ><i class="fa-solid fa-angles-down"></i
+          ></span>
         </div>
-      </span>
+      </div>
     </nav>
     <header>
       <div>
@@ -62,7 +74,7 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="container">  
+    <main class="container">
       <section class="new-tweet">
         <div class="error-message-content"></div>
         <form action="http://localhost:8080/tweets" method="POST">
@@ -70,13 +82,17 @@
           <textarea class="tweet-text" name="text" id="tweet-text"></textarea>
           <div>
             <button class="tweet-button" type="submit">Tweet</button>
-            <output class="word-count" name="counter" class="counter" for="tweet-text">140</output>
+            <output
+              class="word-count"
+              name="counter"
+              class="counter"
+              for="tweet-text"
+              >140</output
+            >
           </div>
         </form>
       </section>
-      
     </main>
-    <script>
-    </script>
+    <div><i class="fa-3x fa-solid fa-circle-arrow-up scroll-top"></i></div>
   </body>
 </html>
