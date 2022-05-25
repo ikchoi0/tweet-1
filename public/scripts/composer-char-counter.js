@@ -1,9 +1,8 @@
 $(document).ready(function() {
   $(".new-tweet > form > textarea").on('input', function(){
-    const inputCount = this.value.length;
-    const wordCount = document.querySelector("output");
-    const resultCount = 140 - inputCount ;
-    wordCount.innerHTML = resultCount
-    wordCount.style.color = resultCount < 0 ? "red" : "rgb(111, 109, 109)";
+    const currentLen = $(this).val().length;
+    const wordCount = $(this).next().find("output");
+    wordCount.val(140 - currentLen);
+    wordCount.css('color', wordCount.val() < 0 ? "red" : "rgb(111, 109, 109)");
   })
 });

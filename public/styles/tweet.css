@@ -1,4 +1,12 @@
+.tweet-container {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 article.tweet {
+  width: 100%;
   padding: 0.4em;
   border-style: solid;
   border-color: rgb(82, 82, 82);
@@ -7,6 +15,8 @@ article.tweet {
   flex-direction: column;
   justify-content: space-between;
   height: 7em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 article.tweet:hover {
@@ -30,8 +40,10 @@ article > footer {
   height: 1.5em;
 }
 
-article.tweet > header > i {
+article.tweet > header > img {
   padding-right: 0.3em;
+  width: 2em;
+  height: auto;
 }
 
 .userInfo {
@@ -62,6 +74,7 @@ article.tweet > footer > div.icons {
 }
 
 div.icons > i {
+  margin-top: 0.3em;
   margin-left: 0.3em;
 }
 

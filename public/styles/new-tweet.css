@@ -1,7 +1,7 @@
 .new-tweet > form {
   display: flex;
   flex-direction: column;
-  background-color: beige;
+  background-color: #e3e2e0;
 }
 
 form > label {
@@ -11,7 +11,7 @@ form > label {
 }
 
 #tweet-text {
-  background-color: beige;
+  background-color: #e3e2e0;
   overflow: auto;
   resize: none;
   height: 35px;
@@ -21,7 +21,6 @@ form > label {
   border-right: 0;
   border-width: 3px;
   border-bottom-color: rgb(82, 82, 82);
-  ;
   font-size: 0.7em;
   padding-bottom: 40px;
   margin-top: 0.5em;
@@ -52,8 +51,8 @@ form > div {
   border: none;
 }
 
-.tweet-button:focus {
-  outline: auto;
+.tweet-button:active {
+  outline:auto;
 }
 
 .word-count {
