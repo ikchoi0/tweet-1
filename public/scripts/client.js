@@ -8,7 +8,6 @@ $(() => {
     if (error) {
       const errorMessage = `${triangleAlertIcon}  ${message}  ${triangleAlertIcon}`;
       $(".error-message-content").html(errorMessage).slideDown("slow");
-      error = true;
     } else {
       $.ajax({
         url: "http://localhost:8080/tweets/",
