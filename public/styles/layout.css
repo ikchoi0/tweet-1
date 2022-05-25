@@ -19,6 +19,8 @@ body {
   background-color: #e3e2e0;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -39,3 +41,4 @@ body {
   width: 100%;
   align-items: center;
  }
+
