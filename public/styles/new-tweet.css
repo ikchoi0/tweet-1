@@ -58,3 +58,16 @@ form > div {
 .word-count {
   font-size: 20px;
 }
+
+.error-message-content {
+  padding: 0.7em;
+  width: 100%;
+  border-width: 0.2em;
+  border-style: solid;
+  border-color: red;
+  text-align: center;
+  color: red;
+  margin: auto;
+  display: none;
+  margin-bottom: 1em;
+}

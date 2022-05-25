@@ -14,7 +14,7 @@ article.tweet {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 7em;
+  min-height: 7em;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
@@ -57,6 +57,7 @@ article.tweet > header > img {
 }
 
 .tweet-content {
+  word-wrap:break-word; 
   width: 100%;
   padding: 1.5em 0.5em 1em 0.5em;
   font-size: 0.8em;

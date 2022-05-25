@@ -1,5 +1,10 @@
 $(document).ready(function() {
-  $(".new-tweet > form > textarea").on('input', function(){
+  $(".new-tweet > form > textarea").on('input', function() {
+    let $errorDiv = $(".error-message-content");
+    if (!$errorDiv.val()) {
+      $errorDiv.val("");
+      $errorDiv.css("display", "none")
+    }
     const currentLen = $(this).val().length;
     const wordCount = $(this).next().find("output");
     wordCount.val(140 - currentLen);

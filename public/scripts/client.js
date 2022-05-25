@@ -1,11 +1,14 @@
+const triangleAlertIcon = `<i class="fa-solid fa-triangle-exclamation"></i>`;
+
 $(() => {
   $("section.new-tweet > form").on("submit", function (e) {
     e.preventDefault();
     const wordRamaining = $(".word-count").val();
     const { error, message } = validateInputLength(Number(wordRamaining));
     if (error) {
-      alert(message);
-      return false;
+      const errorMessage = `${triangleAlertIcon}  ${message}  ${triangleAlertIcon}`;
+      $(".error-message-content").html(errorMessage).slideDown("slow");
+      error = true;
     } else {
       $.ajax({
         url: "http://localhost:8080/tweets/",
@@ -13,6 +16,7 @@ $(() => {
         data: $(this).serialize(),
         success: function (json) {
           $("textarea").val("");
+          $(".word-count").val(140);
           $(".tweet-container").prepend(createTweetElement(json));
         },
         error: function (error) {
@@ -51,26 +55,27 @@ const renderTweets = function (tweets) {
 };
 
 const createTweetElement = function (tweet) {
-  let $tweetHtml = `
-  <article class="tweet">
-    <header>
-      <img src=${tweet.user.avatars} alt="avatar">
-      <div class="userInfo">
-        <div>${tweet.user.name}</div></div>
-        <div class="userId">${tweet.user.handle}</div>
-      </div>
-    </header>
-    <div class="tweet-content">${tweet.content.text}</div>
-    <div class="line"></div>
-    <footer>
-      <div class="time-ago">${timeago.format(tweet.created_at)}</div>
-      <div class="icons">
-        <i class="fa-solid fa-flag"></i>
-        <i class="fa-solid fa-retweet"></i>
-        <i class="fa-solid fa-heart"></i>
-      </div>
-    </footer>
-  </article>`;
-
-  return $tweetHtml;
+  let $tweetData = $(`
+    <article class="tweet">
+      <header>
+        <img src=${tweet.user.avatars} alt="avatar">
+        <div class="userInfo">
+          <div>${tweet.user.name}</div></div>
+          <div class="userId">${tweet.user.handle}</div>
+        </div>
+      </header>
+      <div class="tweet-content"></div>
+      <div class="line"></div>
+      <footer>
+        <div class="time-ago">${timeago.format(tweet.created_at)}</div>
+        <div class="icons">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>`);
+  // This was added to prevent XSS
+  $tweetData.find(".tweet-content").text(tweet.content.text);
+  return $tweetData;
 };
