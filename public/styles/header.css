@@ -5,7 +5,7 @@ body > header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(227, 170, 99);
+  background-color: rgb(61, 61, 146);
   background-image: url("../images/header-background.png");
 }
 
@@ -21,6 +21,23 @@ header > div > h2 {
 
 header > div > h2 > span {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 590px) {
+  body > header {
+    background-image: none;
+
+    height: 120px;
+    justify-content: flex-end;
+  }
+
+  header > div > img {
+    display: none;
+  }
+
+  header > div > h2 {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
