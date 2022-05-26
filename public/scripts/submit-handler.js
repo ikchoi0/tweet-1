@@ -16,13 +16,15 @@ $(() => {
         type: "POST",
         data: $(this).serialize(),
       })
-        .then(sendTweeter(() => {
-          setTimeout(() => {
+        .then(
+          sendTweeter(() => {
+            setTimeout(() => {
               $(".fa-twitter").hide();
               $(".fadingEffect").hide();
-              $(".fa-envelope").hide(); 
-          }, 1500);
-        }))
+              $(".fa-envelope").hide();
+            }, 1100);
+          })
+        )
         .done(function (json) {
           $("textarea").val("");
           $(".word-count").val(MAX_WORDS);
@@ -40,9 +42,9 @@ function sendTweeter(callback) {
   $(".fa-envelope").show();
   $(".fa-twitter").show();
   $(".fadingEffect").show();
-  $(".fa-twitter").css("animation", "leftToRight ease-out 1.5s");
-  $(".fadingEffect").css("animation", "hideBox 1.9s ease alternate");
-  $(".fa-envelope").css("animation", "moveEnvelope linear 1.4s");
+  $(".fa-twitter").css("animation", "leftToRight ease-out 1s");
+  $(".fadingEffect").css("animation", "hideBox 1s ease-out alternate");
+  $(".fa-envelope").css("animation", "moveEnvelope linear 1s");
   callback();
 }
 

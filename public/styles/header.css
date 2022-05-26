@@ -26,7 +26,6 @@ header > div > h2 > span {
 @media only screen and (max-width: 590px) {
   body > header {
     background-image: none;
-
     height: 120px;
     justify-content: flex-end;
   }
@@ -42,9 +41,10 @@ header > div > h2 > span {
 
 @media only screen and (min-width: 1024px) {
   body > header {
-    width: 60%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 35%;
     margin-top: 2.5em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
+
 }

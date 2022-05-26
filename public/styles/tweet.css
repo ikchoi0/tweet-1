@@ -1,4 +1,5 @@
 .tweet-container {
+  width: 100%;
   margin-top: 1.5em;
   display: flex;
   flex-direction: column;
@@ -81,5 +82,13 @@ div.icons > i {
 
 div.icons > i:hover {
   color: gold;
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweet-container {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 

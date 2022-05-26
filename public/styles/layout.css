@@ -26,17 +26,12 @@ body {
   flex-direction: column;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
 main {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 main > section {
@@ -47,10 +42,15 @@ main > section {
 
 @media only screen and (min-width: 1024px) {
   body {
-    display: flex;
     flex-direction: row;
     margin-top: 8em;
-    align-items: flex-start;
+    justify-content: space-between;
+
+  }
+  main {
+    width: 50%;
+    margin-left: 1;
+    margin-right: 1;
   }
   main > section {
     margin-top: 0;
