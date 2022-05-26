@@ -38,6 +38,51 @@ form > label {
   display: none;
 }
 
+form {
+  position: relative;
+}
+.fa-twitter {
+  display: none;
+  position:absolute;
+  z-index: 1;
+  color: rgb(124, 124, 222);
+  width: 100%;
+}
+.fadingEffect {
+  display: none;
+  position:absolute;
+  top:0; bottom:0;
+  width:100%;
+  background-color: #e3e2e0;
+  margin-top: 0;
+}
+
+.fa-envelope {
+  color:rgb(214, 77, 77);
+  display: none;
+  position:absolute;
+  margin-left: 50%;
+  margin-top: 30px;
+  width: 100%;
+}
+
+@keyframes moveEnvelope {
+  0% {transform: translateX(0)}
+  50% {transform: translateX(0)translateY(60%)}
+  100% {transform: translateX(70%) translateY(-110%)}
+}
+
+@keyframes hideBox { /* Chrome, Safari */
+  0% {width:0%}
+  100% {width:100%;}
+}
+
+@keyframes leftToRight {
+  0% {transform: translateX(0) translateY(-100%);}
+  50% {transform: translateX(50%) translateY(0);}
+  100% {transform: translateX(110%) translateY(-100%)}
+}
+
 form > div {
   margin-top: 10px;
   display: flex;
@@ -72,4 +117,41 @@ form > div {
   margin: auto;
   display: none;
   margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 1024px) {
+  body > header {
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .new-tweet > form {
+    display: flex;
+    flex-direction: column;
+    background-color: #e3e2e0;
+    margin-top: 2.5em;
+  }
+
+  form > label {
+    font-weight: 600;
+    font-size: 0.8em;
+    color: rgb(111, 109, 109);
+  }
+
+  #tweet-text {
+    background-color: #e3e2e0;
+    overflow: auto;
+    resize: none;
+    height: 35px;
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: 3px;
+    border-bottom-color: rgb(82, 82, 82);
+    font-size: 0.7em;
+    padding-bottom: 40px;
+    margin-top: 0.5em;
+  }
 }
