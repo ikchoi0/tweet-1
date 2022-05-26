@@ -1,3 +1,6 @@
+$body-color: #e3e2e0;
+$font: "Source Sans Pro", sans-serif;
+$font-color: #545149;
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -6,7 +9,6 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -16,10 +18,11 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   min-width: 480px;
-  color: #545149;
-  background-color: #e3e2e0;
+  color: $font-color;
+  background-color: $body-color;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
@@ -46,13 +49,11 @@ main > section {
     margin-top: 8em;
     justify-content: space-between;
   }
-
   main {
     width: 50%;
     margin-left: 1;
     margin-right: 1;
   }
-
   main > section {
     margin-top: 0;
   }

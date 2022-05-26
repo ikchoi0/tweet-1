@@ -28,7 +28,7 @@ $(() => {
               $(".fa-twitter").hide();
               $(".fadingEffect").hide();
               $(".fa-envelope").hide();
-            }, 1100);
+            }, 900);
           })
         )
         .done(function (json) {

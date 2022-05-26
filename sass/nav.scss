@@ -1,0 +1,97 @@
+
+$font: "Source Sans Pro", sans-serif;
+$nav-font-color: white;
+$wide-screen-color: rgb(61, 61, 146);
+
+
+nav {
+  height: 120px;
+  width: 100%;
+  top: 0;
+  color: $nav-font-color;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+nav {
+  div {
+    font-family: Bungee;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    font-size: 1.5em;
+  }
+}
+
+.nav-right {
+  div {
+    font-size: 0.6em;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.write-new-tweet {
+  padding: 0.5em;
+}
+
+.toggle-tweet {
+  i.fa-2x {
+    display: none;
+  }
+}
+
+.write-new-tweet {
+  span {
+    font-weight: 600;
+  }
+}
+
+.toggle-tweet {
+  i {
+    position:relative;
+    top: -0.3em;
+    color: red;
+    padding: 0 0.3em 0.3em 0.3em;
+  }
+}
+
+@keyframes bounce {
+	0%, 100% {transform: translateY(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateY(-0.3em);}
+	20%, 40%, 60%, 80% {transform: translateY(0.3em);}
+}
+
+.nav-profile-picture {
+  display: none;
+}
+
+@media only screen and (max-width: 590px) {
+  .toggle-tweet {
+    display: flex;
+  }
+  .write-new-tweet {
+    display: none;
+  }
+  .toggle-tweet > i {
+    display: none;
+  }
+  .toggle-tweet > i.fa-2x {
+    display: block;
+    position:relative;
+    top: 0.3em;
+  }
+  .nav-profile-picture {
+    width: 50px;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: $wide-screen-color;
+  }
+}

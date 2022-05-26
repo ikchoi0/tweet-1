@@ -1,3 +1,6 @@
+$background-color: #e3e2e0;
+$error-message-color: red;
+
 .new-tweet {
   display: none;
 }
@@ -5,7 +8,7 @@
 .new-tweet > form {
   display: flex;
   flex-direction: column;
-  background-color: #e3e2e0;
+  background-color: $background-color;
 }
 
 form > label {
@@ -15,7 +18,7 @@ form > label {
 }
 
 #tweet-text {
-  background-color: #e3e2e0;
+  background-color: $background-color;
   overflow: auto;
   resize: none;
   height: 35px;
@@ -41,7 +44,6 @@ form > label {
 form {
   position: relative;
 }
-
 .fa-twitter {
   display: none;
   position: absolute;
@@ -49,7 +51,6 @@ form {
   color: rgb(124, 124, 222);
   width: 100%;
 }
-
 .fadingEffect {
   display: none;
   position: absolute;
@@ -80,6 +81,7 @@ form {
     transform: translateX(70%) translateY(-110%);
   }
 }
+
 @keyframes hideBox {
   /* Chrome, Safari */
   0% {
@@ -89,6 +91,7 @@ form {
     width: 100%;
   }
 }
+
 @keyframes leftToRight {
   0% {
     transform: translateX(0) translateY(-100%);
@@ -100,6 +103,7 @@ form {
     transform: translateX(110%) translateY(-100%);
   }
 }
+
 form > div {
   margin-top: 10px;
   display: flex;
@@ -129,9 +133,9 @@ form > div {
   width: 100%;
   border-width: 0.2em;
   border-style: solid;
-  border-color: red;
+  border-color: $error-message-color;
   text-align: center;
-  color: red;
+  color: $error-message-color;
   margin: auto;
   display: none;
   margin-bottom: 1em;
