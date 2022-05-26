@@ -17,6 +17,7 @@ html {
  */
 
 body {
+  min-width: 480px;
   color: #545149;
   background-color: #e3e2e0;
   font-size: 24px;
@@ -42,4 +43,19 @@ main > section {
   margin-top: 40px;
   width: 100%;
   align-items: center;
+}
+
+  
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8em;
+    align-items: flex-start;
+  }
+  main > section {
+    margin-top: 0;
+  }
+  
+
 }
