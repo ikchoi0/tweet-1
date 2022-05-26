@@ -1,3 +1,5 @@
+// Shows the button that automatically scrolls the window to home when the user scrolls the page more than 100 unit from home vertically
+
 $(() => {
   $(document).scroll(function () {
     var y = $(this).scrollTop();

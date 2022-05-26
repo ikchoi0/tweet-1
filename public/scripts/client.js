@@ -1,3 +1,4 @@
+// Sends AJAX request to server to query tweet data. Once data is successfully received, it formats each tweet data and appends the generated html tag to the <main class= "container">
 $(() => {
   loadtweets();
 });

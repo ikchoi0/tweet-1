@@ -1,3 +1,4 @@
+// Add eventlistener to toggle button. It slides out the form for writing a new tweet message. 
 $(() => {
   $("span.toggle-tweet").on("click", function () {
     const $newTweetSection = $("section.new-tweet");

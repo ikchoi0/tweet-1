@@ -1,3 +1,5 @@
+// Checks the text length in textarea. Then updates the valid remaining length to <output>
+
 $(document).ready(function() {
   $(".new-tweet > form > textarea").on('input', function() {
     let $errorDiv = $(".error-message-content");
